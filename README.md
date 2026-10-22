@@ -58,6 +58,20 @@ Rclone has a built-in assistant that connects to Google Drive safely using a sta
 3. Change the `MY_WINDOWS_USERNAME = "YOUR_WINDOWS_USER"` to match your actual Windows profile name.
 4. Save the file. You can now double-click it anytime to instantly back up your music data!
 
+
+### Step 4: Make It Automatic (Run It on a Schedule)
+Instead of double-clicking the file manually every day, you can get Windows to run it completely on its own in the background.
+1. Open your Windows search bar, type **Task Scheduler**, and press enter.
+2. On the right-hand panel, click **Create Basic Task...**
+3. Name your task `FL Studio Cloud Backup` and click Next.
+4. Set the trigger to **Daily** and click Next. Choose the exact time you want the backup to run every day (like midnight).
+5. Set the action to **Start a program** and click Next.
+6. In the **Program/script** box, type exactly: `python`
+7. In the **Add arguments (optional)** box, type the exact path to your script inside quotes, for example: `"C:\Users\YOUR_WINDOWS_USER\Documents\backup_script.py"`
+8. Click Next, then click **Finish**. 
+
+Your computer will now silently back up your music every single day at your chosen time without you ever needing to open a single window!
+
 ---
 
 ### 🔑 Optional: Advanced Developer API Configuration (Custom Credentials)
